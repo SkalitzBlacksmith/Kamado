@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masterclasses | Kamado Breda</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <a class="logo" href="index.html">KAMADO <small>BREDA</small></a>
+        <nav aria-label="Hoofdnavigatie">
+            <a href="index.html">Home</a>
+            <a href="kamados.html">Kamado's</a>
+            <a href="masterclasses.html">Masterclasses</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Masterclasses</h1>
+            <p>Leer koken op een kamado.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section>
+        <section class="columns">
+            <div>
+                <div class="image-box" aria-label="Afbeelding"></div>
+                <h2>Wat ga je leren?</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Maak kennis met de kamado en verschillende kooktechnieken.</p>
+            </div>
+            <form action="masterclasses.html" method="get">
+                <h2>Aanmelden</h2>
+                <p>Vul hieronder je gegevens in.</p>
+                <label for="naam">Naam</label>
+                <input id="naam" name="naam" type="text" autocomplete="name" required>
+                <label for="email">E-mailadres</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+                <label for="masterclass">Masterclass</label>
+                <select id="masterclass" name="masterclass" required>
+                    <option value="">Kies een masterclass</option>
+                    <option value="basis">Basis van de kamado</option>
+                    <option value="grillen">Grillen en roken</option>
+                </select>
+                <label for="personen">Aantal personen</label>
+                <select id="personen" name="personen">
+                    <option>1</option><option>2</option><option>3</option><option>4</option>
+                </select>
+                <button type="submit">Versturen</button>
+                <p><small>Dit is een oefenformulier. Aanmeldingen worden nog niet opgeslagen of verzonden.</small></p>
+            </form>
+        </section>
+    </main>
+    <footer id="contact">
+        <h2>Kamado Breda</h2>
+        <p>Voor kamado's, persoonlijk advies en masterclasses in Breda.</p>
+        <a href="mailto:info@example.com">Contact (voorbeeldadres)</a>
+    </footer>
+</body>
+</html>

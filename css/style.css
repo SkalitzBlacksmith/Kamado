@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #222;
+    background: white;
+}
+
+header,
+main,
+footer {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo {
+    font-size: 24px;
+    color: #222;
+    text-decoration: none;
+}
+
+.logo small {
+    display: block;
+    font-size: 12px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+a {
+    color: #222;
+}
+
+section {
+    padding: 20px 0;
+}
+
+.columns {
+    display: flex;
+    gap: 30px;
+}
+
+.columns > * {
+    flex: 1;
+    min-width: 0;
+}
+
+.benefits {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-left: 20px;
+}
+
+form {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+input,
+select,
+button {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    font: inherit;
+}
+
+button {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+footer {
+    border-top: 1px solid #ccccccca;
+}
+
+@media (max-width: 700px) {
+    .columns,
+    .benefits {
+        display: block;
+    }
+
+    .columns > * + * {
+        margin-top: 20px;
+    }
+}
+
+.image-box {
+    min-height: 240px;
+    background: #ddd;
+}
