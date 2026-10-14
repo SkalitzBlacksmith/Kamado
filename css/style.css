@@ -88,7 +88,10 @@ p {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    padding-left: 20px;
+    margin: 0;
+    padding: 20px 20px 20px 40px;
+    color: #253d49;
+    background: #e1c9ac;
 }
 
 form {
@@ -141,4 +144,35 @@ footer h2 {
 .image-box {
     min-height: 240px;
     background: #d9c6ae;
+}
+
+nav a {
+    padding: 8px 0;
+    text-decoration: none;
+}
+
+nav a[aria-current="page"],
+nav a:hover {
+    color: #e8b782;
+    text-decoration: underline;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #974b32;
+    color: #fff;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: #7c3d28;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 2px solid #e8b782;
+    outline-offset: 4px;
 }
