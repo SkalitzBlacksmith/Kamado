@@ -1,9 +1,9 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    line-height: 1.5;
-    color: #222;
-    background: white;
+    line-height: 1.6;
+    color: #f2e9dc;
+    background: #253d49;
 }
 
 header,
@@ -11,7 +11,7 @@ main,
 footer {
     max-width: 1100px;
     margin: auto;
-    padding: 20px;
+    padding: 24px;
 }
 
 header {
@@ -20,18 +20,21 @@ header {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #58707b;
 }
 
 .logo {
-    font-size: 24px;
-    color: #222;
+    font-size: 26px;
+    letter-spacing: 2px;
+    color: #e8b782;
     text-decoration: none;
 }
 
 .logo small {
     display: block;
     font-size: 12px;
+    letter-spacing: 5px;
+    color: #f2e9dc;
 }
 
 nav {
@@ -41,16 +44,39 @@ nav {
 }
 
 a {
-    color: #222;
+    color: #f2e9dc;
+    text-underline-offset: 4px;
 }
 
 section {
-    padding: 20px 0;
+    padding: 32px 0;
+}
+
+h1,
+h2 {
+    color: #e8b782;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+h1 {
+    margin: 0 0 24px;
+    font-size: 38px;
+}
+
+h2 {
+    margin: 0 0 18px;
+    font-size: 26px;
+}
+
+p {
+    margin: 0 0 20px;
 }
 
 .columns {
     display: flex;
-    gap: 30px;
+    gap: 40px;
+    align-items: flex-start;
 }
 
 .columns > * {
@@ -93,7 +119,12 @@ button {
 }
 
 footer {
-    border-top: 1px solid #ccccccca;
+    border-top: 1px solid #58707b;
+    background: #1a303c;
+}
+
+footer h2 {
+    font-size: 22px;
 }
 
 @media (max-width: 700px) {
@@ -109,5 +140,5 @@ footer {
 
 .image-box {
     min-height: 240px;
-    background: #ddd;
+    background: #d9c6ae;
 }
