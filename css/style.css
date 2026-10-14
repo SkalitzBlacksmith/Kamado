@@ -95,16 +95,15 @@ p {
 }
 
 form {
-    border: 1px solid #ccc;
-    padding: 25px;
-    background-color: #fff;   
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); 
-    border-radius: 8px;  
+    padding: 24px;
+    color: #253d49;
+    background: #f2e9dc;
 }
 
 label {
     display: block;
-    margin-top: 15px;
+    margin-top: 16px;
+    margin-bottom: 6px;
 }
 
 input,
@@ -112,12 +111,19 @@ select,
 button {
     box-sizing: border-box;
     width: 100%;
-    padding: 8px;
+    padding: 10px;
+    border: 1px solid #8b9698;
+    border-radius: 0;
+    color: #253d49;
+    background: #fff;
     font: inherit;
 }
 
 button {
-    margin-top: 20px;
+    margin-top: 24px;
+    border: 0;
+    color: #fff;
+    background: #974b32;
     cursor: pointer;
 }
 
@@ -131,6 +137,28 @@ footer h2 {
 }
 
 @media (max-width: 700px) {
+    header,
+    main,
+    footer {
+        padding: 20px;
+    }
+
+    header {
+        align-items: flex-start;
+    }
+
+    nav {
+        gap: 16px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    section {
+        padding: 24px 0;
+    }
+
     .columns,
     .benefits {
         display: block;
@@ -175,4 +203,25 @@ input:focus-visible,
 select:focus-visible {
     outline: 2px solid #e8b782;
     outline-offset: 4px;
+}
+
+form h2 {
+    color: #253d49;
+}
+
+form small {
+    display: block;
+    margin-top: 12px;
+}
+
+button:hover {
+    background: #7c3d28;
+}
+
+input::placeholder {
+    color: #626a6d;
+}
+
+.image-box + h2 {
+    margin-top: 24px;
 }
