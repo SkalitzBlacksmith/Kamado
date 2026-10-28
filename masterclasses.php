@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masterclasses | Kamado Breda</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-    <header>
-        <a class="logo" href="index.html">KAMADO <small>BREDA</small></a>
-        <nav aria-label="Hoofdnavigatie">
-            <a href="index.html">Home</a>
-            <a href="kamados.html">Kamado's</a>
-            <a href="masterclasses.html" aria-current="page">Masterclasses</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<?php
+$page = "masterclasses";
+include __DIR__ . "/includes/header.php";
+?>
     <main>
         <section>
             <h1>Masterclasses</h1>
@@ -30,7 +15,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <p>Maak kennis met de kamado en verschillende kooktechnieken.</p>
             </div>
-            <form action="masterclasses.html" method="get">
+            <form action="masterclasses.php" method="get">
                 <h2>Aanmelden</h2>
                 <p>Vul hieronder je gegevens in.</p>
                 <label for="naam">Naam</label>
@@ -52,10 +37,4 @@
             </form>
         </section>
     </main>
-    <footer id="contact">
-        <h2>Kamado Breda</h2>
-        <p>Voor kamado's, persoonlijk advies en masterclasses in Breda.</p>
-        <a href="mailto:info@example.com">Contact (voorbeeldadres)</a>
-    </footer>
-</body>
-</html>
+<?php include __DIR__ . "/includes/footer.php"; ?>

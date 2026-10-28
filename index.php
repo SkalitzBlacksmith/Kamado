@@ -1,30 +1,15 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Kamado Breda</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-    <header>
-        <a class="logo" href="index.html" aria-current="page">KAMADO <small>BREDA</small></a>
-        <nav aria-label="Hoofdnavigatie">
-            <a href="index.html" aria-current="page">Home</a>
-            <a href="kamados.html">Kamado's</a>
-            <a href="masterclasses.html">Masterclasses</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<?php
+$page = "index";
+include __DIR__ . "/includes/header.php";
+?>
     <main>
         <section class="columns">
             <div>
                 <h1>Welkom bij Kamado Breda</h1>
                 <p>Ontdek koken op een kamado.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <p><a class="button" href="kamados.html">Bekijk de kamado's</a></p>
-                <p><a href="masterclasses.html">Naar masterclasses</a></p>
+                <p><a class="button" href="kamados.php">Bekijk de kamado's</a></p>
+                <p><a href="masterclasses.php">Naar masterclasses</a></p>
             </div>
             <div class="image-box" aria-label="Afbeelding"></div>
         </section>
@@ -44,10 +29,4 @@
             </div>
         </section>
     </main>
-    <footer id="contact">
-        <h2>Kamado Breda</h2>
-        <p>Voor kamado's, persoonlijk advies en masterclasses in Breda.</p>
-        <a href="mailto:info@example.com">Contact (voorbeeldadres)</a>
-    </footer>
-</body>
-</html>
+<?php include __DIR__ . "/includes/footer.php"; ?>
