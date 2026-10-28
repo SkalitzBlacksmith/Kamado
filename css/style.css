@@ -370,16 +370,7 @@ p {
     border-color:var(--accent);
 }
 
-.advice {
-    border-top:1px solid var(--line);
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    column-gap:40px;
-}
 
-.advice h2 {
-    grid-row:span 2;
-}
 
 .class-image {
     margin-bottom:32px;
@@ -580,9 +571,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible {
         padding-top:0;
     }
 
-    .advice {
-        display:block;
-    }
 
     .footer-inner {
         flex-direction:column;
