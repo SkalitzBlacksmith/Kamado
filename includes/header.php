@@ -1,4 +1,7 @@
 <?php
+header('X-Content-Type-Options: nosniff');
+header('Referrer-Policy: strict-origin-when-cross-origin');
+header("Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-src https://www.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'");
 $titles = ['index' => 'Home', 'kamados' => "Kamado’s", 'masterclasses' => 'Masterclasses'];
 ?>
 <!DOCTYPE html>
