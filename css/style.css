@@ -3,9 +3,9 @@
     --ink:#f5eee3;
     --muted:#cbd2d0;
     --accent:#efbc88;
-    --bg:#203c49;
+    --bg:#1d3540;
     --deep:#132d3a;
-    --rust:#ad593c;
+    --rust:#a64d31;
     --line:#5c727a;
 }
 
@@ -19,7 +19,7 @@ html {
 
 body {
     margin:0;
-    background:var(--bg);
+    background:radial-gradient(ellipse at 90% 0,#304f5b 0,transparent 55%),var(--bg);
     color:var(--ink);
     font:16px/1.65 Arial,sans-serif;
 }
@@ -60,7 +60,7 @@ a {
     position:sticky;
     top:0;
     z-index:5;
-    background:linear-gradient(100deg,#102a37,#203c49 60%);
+    background:linear-gradient(90deg,#0e2430,#203b47 65%);
     border-bottom:1px solid #ffffff20;
     box-shadow:0 6px 24px #071e2826;
 }
@@ -73,7 +73,7 @@ a {
 }
 
 .header-inner {
-    height:94px;
+    height:104px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -103,17 +103,16 @@ a {
 .logo-mark {
     display:grid;
     place-items:center;
-    width:43px;
-    height:43px;
-    border:2px solid #efbc88;
-    border-radius:50%;
-    font-size:28px;
+    width:48px;
+    height:56px;
+    filter:drop-shadow(0 3px 5px #0005);
 }
 
 .first {
     padding-left:13px;
     border-left:1px solid #ffffff50;
-    font:32px/1 Georgia,serif;
+    font:italic 38px/1 Georgia,serif;
+    text-shadow:0 2px 8px #0005;
     letter-spacing:-2px;
 }
 
@@ -217,10 +216,10 @@ p {
 .hero-art img,.class-image {
     width:100%;
     height:auto;
-    aspect-ratio:1.35;
+    aspect-ratio:1.55;
     object-fit:cover;
     border-radius:2px;
-    box-shadow:0 18px 45px #081d2870;
+    box-shadow:12px 14px 0 #efbc8812,0 22px 48px #081d2870;
 }
 
 .hero-art span {
@@ -249,12 +248,13 @@ p {
     text-decoration:none;
     cursor:pointer;
     box-shadow:0 7px 18px #0a202b40;
-    transition:background .15s,transform .15s;
+    transition:background .15s,transform .15s,box-shadow .15s;
 }
 
 .button:hover,button[type=submit]:hover {
     background:#c46a49;
     transform:translateY(-2px);
+    box-shadow:0 10px 22px #071d2860;
 }
 
 .text-link {
@@ -385,6 +385,7 @@ p {
 
 form {
     padding:36px;
+    border-top:4px solid var(--accent);
     background:#f1e7d9;
     color:#263d46;
     box-shadow:0 18px 45px #0a202b55;
@@ -548,7 +549,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible {
     }
 
     .hero-art img {
-        aspect-ratio:1.35;
+        aspect-ratio:1.55;
     }
 
     .benefits {
@@ -601,4 +602,72 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible {
         transition:none;
     }
 
+}
+
+section[id],footer[id] {
+    scroll-margin-top:120px;
+}
+
+.hero-art img {
+    object-position:50% 45%;
+}
+
+.about-art {
+    padding:0 20px 20px 0;
+    background:linear-gradient(135deg,transparent 35%,#efbc8820 35%);
+}
+
+.class-details {
+    margin:28px 0;
+    border-top:1px solid var(--line);
+}
+
+.class-details div {
+    padding:16px 0;
+    border-bottom:1px solid var(--line);
+}
+
+.class-details dt {
+    color:var(--accent);
+    font-weight:bold;
+}
+
+.class-details dd {
+    margin:5px 0 0;
+}
+
+input:focus,select:focus,textarea:focus {
+    outline:2px solid #98502f;
+    outline-offset:3px;
+}
+
+.gallery-controls button:focus-visible {
+    outline:2px solid var(--accent);
+    outline-offset:4px;
+}
+
+.gallery-status {
+    margin:12px 0 0;
+    color:var(--muted);
+    font-size:.85rem;
+}
+
+@media(max-width:700px) {
+    .logo {
+        font-size:16px;
+        gap:8px;
+    }
+
+    .logo-mark {
+        width:36px;
+        height:46px;
+    }
+
+    .first {
+        font-size:30px;
+    }
+
+    .hero-art img {
+        aspect-ratio:1.55;
+    }
 }
