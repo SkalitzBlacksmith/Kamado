@@ -197,6 +197,10 @@ p {
     align-items:center;
 }
 
+.columns > * {
+    min-width:0;
+}
+
 .hero {
     padding:76px 0 66px;
 }
@@ -340,6 +344,8 @@ p {
 
 .gallery-controls button {
     width:104px;
+    min-width:0;
+    flex:0 1 104px;
     padding:4px;
     border:2px solid transparent;
     background:#102b39;
