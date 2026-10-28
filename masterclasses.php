@@ -1,13 +1,11 @@
 <?php
-session_set_cookie_params(['httponly' => true, 'samesite' => 'Lax', 'secure' => !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off']);
-session_start();
+require __DIR__ . '/includes/session.php';
 $page = 'masterclasses';
 $classes = ['basis' => 'Basis van de kamado', 'grillen' => 'Grillen en roken'];
 $dates = ['2027-03-06' => '6 maart 2027', '2027-03-20' => '20 maart 2027', '2027-04-10' => '10 april 2027'];
 $name = $email = $selected = $date = '';
 $people = '1';
 $errors = [];
-if (empty($_SESSION['token'])) $_SESSION['token'] = bin2hex(random_bytes(32));
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = is_string($_POST['naam'] ?? null) ? trim($_POST['naam']) : '';
     $email = is_string($_POST['email'] ?? null) ? trim($_POST['email']) : '';

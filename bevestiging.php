@@ -1,6 +1,5 @@
 <?php
-session_set_cookie_params(['httponly' => true, 'samesite' => 'Lax', 'secure' => !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off']);
-session_start();
+require __DIR__ . '/includes/session.php';
 $confirmation = $_SESSION['confirmation'] ?? null;
 unset($_SESSION['confirmation']);
 if (!$confirmation) { header('Location: masterclasses.php', true, 303); exit; }
