@@ -13,6 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $date = is_string($_POST['datum'] ?? null) ? $_POST['datum'] : '';
     $people = is_string($_POST['personen'] ?? null) ? $_POST['personen'] : '';
     $token = is_string($_POST['token'] ?? null) ? $_POST['token'] : '';
+    if (time() - ($_SESSION['last_registration'] ?? 0) < 30) $errors[] = 'Je hebt zojuist een aanmelding verstuurd. Wacht even voordat je opnieuw aanmeldt.';
     if (!hash_equals($_SESSION['token'], $token)) $errors[] = 'De sessie is verlopen. Probeer het opnieuw.';
     if ($name === '' || mb_strlen($name) > 80) $errors[] = 'Vul een naam van maximaal 80 tekens in.';
     if (strlen($email) > 254 || !filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = 'Vul een geldig e-mailadres in.';
@@ -24,6 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             require __DIR__ . '/includes/database.php';
             $query = $db->prepare('INSERT INTO inschrijvingen (naam, email, masterclass, datum, personen) VALUES (?, ?, ?, ?, ?)');
             $query->execute([$name, $email, $classes[$selected], $date, (int) $people]);
+            $_SESSION['last_registration'] = time();
             $_SESSION['confirmation'] = ['name' => $name, 'class' => $classes[$selected], 'people' => $people, 'date' => $dates[$date]];
             $_SESSION['token'] = bin2hex(random_bytes(32));
             header('Location: bevestiging.php', true, 303);
@@ -41,11 +43,11 @@ include __DIR__ . '/includes/header.php';
 <main id="inhoud">
     <section class="page-intro"><p class="eyebrow">Samen rond het vuur</p><h1>Masterclasses</h1><p class="lead">Leer koken op een kamado.</p><p>Ontdek de basis en probeer verschillende technieken uit.</p></section>
     <section class="columns class-layout"><div><img class="class-image" src="assets/kamado-breda.webp" alt="Blauwe kamado's voor de winkel in Breda" width="1470" height="820" loading="lazy"><h2>Wat ga je leren?</h2><p>Van het aansteken en op temperatuur brengen tot grillen en roken: maak kennis met de mogelijkheden van de kamado.</p><dl class="class-details"><div><dt>Basis van de kamado</dt><dd>Aansteken, temperatuur regelen en je eerste gerecht bereiden.</dd></div><div><dt>Grillen en roken</dt><dd>Direct en indirect grillen, rookhout gebruiken en rustig garen.</dd></div></dl><p>Meld je alleen aan of neem iemand mee. Je kunt per aanmelding maximaal vier personen opgeven.</p></div>
-    <form action="masterclasses.php" method="post"><h2>Aanmelden</h2><p>Kies een masterclass en een datum. De data zijn voorbeelden voor deze cursuswebsite.</p>
+    <form action="masterclasses.php" method="post"><h2>Aanmelden</h2><p>Kies je masterclass en voorkeursdatum. Je aanmelding wordt direct opgeslagen; de beschikbaarheid moet nog worden bevestigd.</p>
     <?php if ($errors): ?><div class="errors" role="alert"><ul><?php foreach ($errors as $error): ?><li><?= e($error) ?></li><?php endforeach; ?></ul></div><?php endif; ?>
     <input type="hidden" name="token" value="<?= e($_SESSION['token']) ?>">
-    <label for="naam">Naam</label><input id="naam" name="naam" type="text" autocomplete="name" maxlength="80" value="<?= e($name) ?>" required>
-    <label for="email">E-mailadres</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" value="<?= e($email) ?>" required>
+    <label for="naam">Naam</label><input id="naam" name="naam" type="text" autocomplete="name" maxlength="80" placeholder="Je voor- en achternaam" value="<?= e($name) ?>" required>
+    <label for="email">E-mailadres</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="naam@voorbeeld.nl" value="<?= e($email) ?>" required>
     <label for="masterclass">Masterclass</label><select id="masterclass" name="masterclass" required><option value="">Kies een masterclass</option><?php foreach ($classes as $key => $label): ?><option value="<?= e($key) ?>" <?= $selected === $key ? 'selected' : '' ?>><?= e($label) ?></option><?php endforeach; ?></select>
     <label for="datum">Datum</label><select id="datum" name="datum" required><option value="">Kies een datum</option><?php foreach ($dates as $value => $label): ?><option value="<?= e($value) ?>" <?= $date === $value ? 'selected' : '' ?>><?= e($label) ?></option><?php endforeach; ?></select>
     <label for="personen">Aantal personen</label><select id="personen" name="personen"><?php for ($i = 1; $i <= 4; $i++): ?><option value="<?= $i ?>" <?= $people === (string) $i ? 'selected' : '' ?>><?= $i ?></option><?php endfor; ?></select>
