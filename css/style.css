@@ -276,7 +276,7 @@ p {
 }
 
 .benefits span:before {
-    content:'✦';
+    content:'\2022';
     color:#a75239;
     margin-right:12px;
 }
