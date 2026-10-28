@@ -3,11 +3,12 @@ require __DIR__ . '/includes/overzicht-session.php';
 date_default_timezone_set('Europe/Amsterdam');
 function e($value) { return htmlspecialchars((string) $value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); }
 $loggedIn = !empty($_SESSION['overzicht_until']);
+$levelupUrl = $settings['levelup_url'] ?? '../levelup/';
 $sections = [
     'inschrijvingen' => ['title' => 'Masterclasses', 'site' => 'Kamado Breda', 'link' => 'masterclasses.php', 'columns' => ['id' => 'Nr.', 'naam' => 'Naam', 'email' => 'E-mail', 'masterclass' => 'Masterclass', 'datum' => 'Datum', 'personen' => 'Personen', 'aangemaakt' => 'Opgeslagen']],
-    'contactberichten' => ['title' => 'Contactberichten', 'site' => 'LevelUp', 'link' => '../levelup/contact.php', 'columns' => ['id' => 'Nr.', 'naam' => 'Naam', 'email' => 'E-mail', 'onderwerp' => 'Onderwerp', 'bericht' => 'Bericht', 'aangemaakt' => 'Opgeslagen']],
-    'nieuwsbrief' => ['title' => 'Nieuwsbrief', 'site' => 'LevelUp', 'link' => '../levelup/index.php#nieuwsbrief', 'columns' => ['id' => 'Nr.', 'naam' => 'Naam', 'email' => 'E-mail', 'aangemaakt' => 'Opgeslagen']],
-    'bestellingen' => ['title' => 'Bestelaanvragen', 'site' => 'LevelUp', 'link' => '../levelup/producten.php', 'columns' => ['id' => 'Nr.', 'naam' => 'Naam', 'email' => 'E-mail', 'producten' => 'Producten', 'totaal' => 'Totaal', 'aangemaakt' => 'Opgeslagen']]
+    'contactberichten' => ['title' => 'Contactberichten', 'site' => 'LevelUp', 'link' => $levelupUrl . 'contact.php', 'columns' => ['id' => 'Nr.', 'naam' => 'Naam', 'email' => 'E-mail', 'onderwerp' => 'Onderwerp', 'bericht' => 'Bericht', 'aangemaakt' => 'Opgeslagen']],
+    'nieuwsbrief' => ['title' => 'Nieuwsbrief', 'site' => 'LevelUp', 'link' => $levelupUrl . 'index.php#nieuwsbrief', 'columns' => ['id' => 'Nr.', 'naam' => 'Naam', 'email' => 'E-mail', 'aangemaakt' => 'Opgeslagen']],
+    'bestellingen' => ['title' => 'Bestelaanvragen', 'site' => 'LevelUp', 'link' => $levelupUrl . 'producten.php', 'columns' => ['id' => 'Nr.', 'naam' => 'Naam', 'email' => 'E-mail', 'producten' => 'Producten', 'totaal' => 'Totaal', 'aangemaakt' => 'Opgeslagen']]
 ];
 $dataError = '';
 if ($loggedIn) {
