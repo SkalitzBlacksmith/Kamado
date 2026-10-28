@@ -66,4 +66,6 @@ footer { background:var(--deep); border-top:1px solid var(--line); }
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline:3px solid #e8b782; outline-offset:3px; }
 @media (max-width:700px) { .header-inner, main, .footer-inner { padding-left:20px; padding-right:20px; } .header-inner { padding-top:16px; padding-bottom:14px; align-items:flex-start; flex-direction:column; gap:12px; } nav { gap:16px; font-size:.9rem; } .site-header { position:relative; } section { padding:35px 0; } .hero { padding-top:40px; } .columns { grid-template-columns:1fr; gap:30px; } .benefits { flex-direction:column; gap:10px; } .advice { display:block; } .footer-inner { flex-direction:column; gap:5px; } form { padding:22px; } }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
-`n.hero-art img, .class-image, .gallery > img { height:auto; }
+
+.hero-art img, .class-image, .gallery > img { height:auto; }
+
