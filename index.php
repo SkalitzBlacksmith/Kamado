@@ -5,6 +5,6 @@
         <div class="hero-art"><img src="assets/kamado-breda.jpg" alt="Joris voor de winkel met blauwe kamado barbecues" width="1470" height="820"><span>Gemaakt voor het buitenleven</span></div>
     </section>
     <section class="benefits" aria-label="Kamado Breda"><span>Persoonlijk advies</span><span>Kamado's en accessoires</span><span>Leer koken tijdens een masterclass</span></section>
-    <section class="columns about" id="over-ons"><div class="about-art"><span>01</span><strong>Goed eten begint<br>bij goed vuur.</strong></div><div><p class="eyebrow">Ons verhaal</p><h2>Over Kamado Breda</h2><p>Bij Kamado Breda draait alles om buiten koken. Ontdek de mogelijkheden van keramisch koken en leer de technieken tijdens een masterclass.</p><a class="text-link" href="masterclasses.php">Ontdek de masterclasses <span aria-hidden="true">→</span></a></div></section>
+    <section class="columns about" id="over-ons"><div class="about-art"><img src="assets/kamado-rechts.webp" alt="Blauwe kamado bij de winkel" width="460" height="440" loading="lazy"></div><div><p class="eyebrow">Ons verhaal</p><h2>Over Kamado Breda</h2><p>Bij Kamado Breda draait alles om buiten koken. Ontdek de mogelijkheden van keramisch koken en leer de technieken tijdens een masterclass.</p><a class="text-link" href="masterclasses.php">Ontdek de masterclasses <span aria-hidden="true">→</span></a></div></section>
 </main>
 <?php include __DIR__ . '/includes/footer.php'; ?>

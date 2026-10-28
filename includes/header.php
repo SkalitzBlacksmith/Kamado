@@ -15,7 +15,8 @@ $titles = ['index' => 'Home', 'kamados' => "Kamado’s", 'masterclasses' => 'Mas
 <a class="skip-link" href="#inhoud">Direct naar inhoud</a>
 <header class="site-header"><div class="header-inner">
     <a class="logo" href="index.php" aria-label="Kamado Breda, naar home"><span class="logo-mark" aria-hidden="true">◒</span><span>KAMADO <small>BREDA</small></span><span class="first">1<sup>st</sup></span></a>
-    <nav aria-label="Hoofdnavigatie">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
+    <nav id="main-nav" aria-label="Hoofdnavigatie">
         <?php foreach ($titles as $link => $title): ?>
             <a href="<?= $link ?>.php" <?= $page === $link ? 'aria-current="page"' : '' ?>><?= htmlspecialchars($title) ?></a>
         <?php endforeach; ?>
