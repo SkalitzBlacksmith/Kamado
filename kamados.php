@@ -1,29 +1,7 @@
-<?php
-$page = "kamados";
-include __DIR__ . "/includes/header.php";
-?>
-    <main>
-        <section>
-            <h1>Kamado's</h1>
-            <p>Ontdek onze kamado's.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </section>
-        <section class="columns">
-            <div class="image-box" aria-label="Afbeelding"></div>
-            <div>
-                <h2>Productnaam</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <ul>
-                    <li>Kenmerk van de kamado</li>
-                    <li>Materiaal en afmetingen</li>
-                    <li>Bijgeleverde accessoires</li>
-                </ul>
-                <a class="button" href="#contact">Meer informatie</a>
-            </div>
-        </section>
-        <section>
-            <h2>Advies nodig?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Wij helpen je graag met kiezen.</p>
-        </section>
-    </main>
-<?php include __DIR__ . "/includes/footer.php"; ?>
+<?php $page = 'kamados'; include __DIR__ . '/includes/header.php'; ?>
+<main id="inhoud">
+    <section class="page-intro"><p class="eyebrow">Ontdek het buiten koken</p><h1>Kamado's</h1><p class="lead">Een barbecue met eindeloos veel mogelijkheden.</p><p>Grillen, roken of langzaam garen: met een kamado bepaal je zelf hoe je kookt.</p></section>
+    <section class="columns product"><div class="gallery"><img id="gallery-image" src="assets/kamado.svg" alt="Illustratie van een blauwe kamado" width="700" height="500"><div class="gallery-controls" aria-label="Afbeeldingen"><button type="button" data-image="assets/kamado.svg" data-alt="Illustratie van een blauwe kamado" aria-pressed="true">Kamado</button><button type="button" data-image="assets/grill.svg" data-alt="Illustratie van het rooster van een kamado" aria-pressed="false">Rooster</button><button type="button" data-image="assets/fire.svg" data-alt="Illustratie van vuur in een kamado" aria-pressed="false">Vuur</button></div></div><div><p class="eyebrow">De blauwe kamado</p><h2>Koken op jouw manier</h2><p>De keramische kamado houdt warmte vast en geeft je controle over de temperatuur. Zo kun je rustig garen of juist snel grillen.</p><ul><li>Keramische barbecue</li><li>Voor grillen, roken en langzaam garen</li><li>Te combineren met gietijzeren accessoires</li></ul><a class="button" href="masterclasses.php">Leer koken op een kamado</a></div></section>
+    <section class="advice"><h2>Advies nodig?</h2><p>Maak eerst kennis met de mogelijkheden tijdens een masterclass.</p><a class="text-link" href="masterclasses.php">Bekijk de masterclasses →</a></section>
+</main>
+<?php include __DIR__ . '/includes/footer.php'; ?>
