@@ -8,7 +8,8 @@ $titles = ['index' => 'Home', 'kamados' => "Kamado’s", 'masterclasses' => 'Mas
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Ontdek blauwe kamado's, persoonlijk advies en masterclasses in Breda.">
     <title><?= htmlspecialchars($titles[$page] ?? 'Kamado Breda') ?> | Kamado Breda</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css?v=<?= filemtime(__DIR__ . '/../css/style.css') ?>">
     <script src="script.js" defer></script>
 </head>
 <body>
