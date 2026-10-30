@@ -49,7 +49,7 @@ include __DIR__ . '/includes/header.php';
             <div><dt>Basis van de kamado</dt><dd>Voor wie voor het eerst met een kamado gaat koken. Je begint bij het aansteken, leert de luchttoevoer instellen en maakt kennis met direct en indirect garen. Bij je eerste gerecht zie je hoe de opstelling en het vuur samenwerken. Je hoeft nog geen ervaring met een kamado te hebben.</dd></div>
             <div><dt>Grillen en roken</dt><dd>Voor wie de basis kent en gerichter wil koken. Je kijkt naar het verschil tussen direct grillen en afgeschermd garen, en naar wat rookhout aan een bereiding toevoegt. De aandacht ligt op de keuzes tijdens het koken: wanneer gebruik je directe hitte en wanneer geef je een gerecht juist meer tijd?</dd></div>
         </dl>
-        <p>Je kunt alleen aanmelden of samen met anderen. Geef één tot vier personen op en kies een voorkeursdatum. Je aanvraag is nog geen bevestigde reservering.</p>
+        <p>Je kunt je alleen of samen met anderen aanmelden. Geef één tot vier personen op en kies een voorkeursdatum. Je aanvraag is nog geen bevestigde reservering.</p>
     </div>
     <form action="masterclasses.php" method="post"><h2>Vraag een plek aan</h2><p>Kies de les die bij je ervaring past en geef je voorkeursdatum door. De beschikbaarheid op die datum moet nog worden bevestigd.</p>
     <?php if ($errors): ?><div class="errors" role="alert"><ul><?php foreach ($errors as $error): ?><li><?= e($error) ?></li><?php endforeach; ?></ul></div><?php endif; ?>
