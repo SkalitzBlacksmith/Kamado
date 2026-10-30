@@ -41,16 +41,24 @@ function e($value) { return htmlspecialchars($value, ENT_QUOTES | ENT_SUBSTITUTE
 include __DIR__ . '/includes/header.php';
 ?>
 <main id="inhoud">
-    <section class="page-intro"><p class="eyebrow">Samen rond het vuur</p><h1>Masterclasses</h1><p class="lead">Leer koken op een kamado.</p><p>Ontdek de basis en probeer verschillende technieken uit.</p></section>
-    <section class="columns class-layout"><div><img class="class-image" src="assets/kamado-breda.webp" alt="Blauwe kamado's voor de winkel in Breda" width="1470" height="820" loading="lazy"><h2>Wat ga je leren?</h2><p>Van het aansteken en op temperatuur brengen tot grillen en roken: maak kennis met de mogelijkheden van de kamado.</p><dl class="class-details"><div><dt>Basis van de kamado</dt><dd>Aansteken, temperatuur regelen en je eerste gerecht bereiden.</dd></div><div><dt>Grillen en roken</dt><dd>Direct en indirect grillen, rookhout gebruiken en rustig garen.</dd></div></dl><p>Meld je alleen aan of neem iemand mee. Je kunt per aanmelding maximaal vier personen opgeven.</p></div>
-    <form action="masterclasses.php" method="post"><h2>Aanmelden</h2><p>Kies je masterclass en voorkeursdatum. Je aanmelding wordt direct opgeslagen; de beschikbaarheid moet nog worden bevestigd.</p>
+    <section class="page-intro"><p class="eyebrow">Masterclasses in Breda</p><h1>Begrijp wat er onder het deksel gebeurt.</h1><p class="lead">Het vuur aanhouden lukt vaak wel. Het op de juiste temperatuur houden vraagt wat meer gevoel.</p><p>In een masterclass leer je hoe luchttoevoer en de opstelling van je rooster je bereiding beïnvloeden. Zo weet je waarom je iets aanpast wanneer het te hard gaat, in plaats van alleen een recept te volgen. Kies de basis als je nog moet beginnen, of ga verder met grillen en rookhout.</p></section>
+    <section class="columns class-layout"><div>
+        <img class="class-image" src="assets/kamado-breda.webp" alt="Blauwe kamado's voor de winkel in Breda" width="1470" height="820" loading="lazy">
+        <h2>Welke masterclass past bij je?</h2>
+        <dl class="class-details">
+            <div><dt>Basis van de kamado</dt><dd>Voor wie voor het eerst met een kamado gaat koken. Je begint bij het aansteken, leert de luchttoevoer instellen en maakt kennis met direct en indirect garen. Bij je eerste gerecht zie je hoe de opstelling en het vuur samenwerken. Je hoeft nog geen ervaring met een kamado te hebben.</dd></div>
+            <div><dt>Grillen en roken</dt><dd>Voor wie de basis kent en gerichter wil koken. Je kijkt naar het verschil tussen direct grillen en afgeschermd garen, en naar wat rookhout aan een bereiding toevoegt. De aandacht ligt op de keuzes tijdens het koken: wanneer gebruik je directe hitte en wanneer geef je een gerecht juist meer tijd?</dd></div>
+        </dl>
+        <p>Je kunt alleen aanmelden of samen met anderen. Geef één tot vier personen op en kies een voorkeursdatum. Je aanvraag is nog geen bevestigde reservering.</p>
+    </div>
+    <form action="masterclasses.php" method="post"><h2>Vraag een plek aan</h2><p>Kies de les die bij je ervaring past en geef je voorkeursdatum door. De beschikbaarheid op die datum moet nog worden bevestigd.</p>
     <?php if ($errors): ?><div class="errors" role="alert"><ul><?php foreach ($errors as $error): ?><li><?= e($error) ?></li><?php endforeach; ?></ul></div><?php endif; ?>
     <input type="hidden" name="token" value="<?= e($_SESSION['token']) ?>">
     <label for="naam">Naam</label><input id="naam" name="naam" type="text" autocomplete="name" maxlength="80" placeholder="Je voor- en achternaam" value="<?= e($name) ?>" required>
     <label for="email">E-mailadres</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="naam@voorbeeld.nl" value="<?= e($email) ?>" required>
     <label for="masterclass">Masterclass</label><select id="masterclass" name="masterclass" required><option value="">Kies een masterclass</option><?php foreach ($classes as $key => $label): ?><option value="<?= e($key) ?>" <?= $selected === $key ? 'selected' : '' ?>><?= e($label) ?></option><?php endforeach; ?></select>
-    <label for="datum">Datum</label><select id="datum" name="datum" required><option value="">Kies een datum</option><?php foreach ($dates as $value => $label): ?><option value="<?= e($value) ?>" <?= $date === $value ? 'selected' : '' ?>><?= e($label) ?></option><?php endforeach; ?></select>
+    <label for="datum">Voorkeursdatum</label><select id="datum" name="datum" required><option value="">Kies een voorkeursdatum</option><?php foreach ($dates as $value => $label): ?><option value="<?= e($value) ?>" <?= $date === $value ? 'selected' : '' ?>><?= e($label) ?></option><?php endforeach; ?></select>
     <label for="personen">Aantal personen</label><select id="personen" name="personen"><?php for ($i = 1; $i <= 4; $i++): ?><option value="<?= $i ?>" <?= $people === (string) $i ? 'selected' : '' ?>><?= $i ?></option><?php endfor; ?></select>
-    <button type="submit">Verstuur aanmelding</button><p class="form-note">Je gegevens worden gebruikt om je aanmelding te verwerken.</p></form></section>
+    <button type="submit">Verstuur mijn aanvraag</button><p class="form-note">Na het versturen zie je een overzicht van je aanvraag. We gebruiken je gegevens voor deze aanmelding.</p></form></section>
 </main>
 <?php include __DIR__ . '/includes/footer.php'; ?>
