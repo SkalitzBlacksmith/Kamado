@@ -5,7 +5,17 @@
     <section class="page-intro"><p class="eyebrow">Kamado's en accessoires</p><h1>De blauwe kamado</h1><p class="lead">Dezelfde barbecue, een andere manier van koken.</p><p>Bij direct grillen ligt je eten boven de houtskool. Met een hitteschild ertussen gaart het door de warmte rondom het gerecht. Juist dat verschil maakt een kamado bruikbaar voor zowel een snelle maaltijd als een groter stuk vlees dat meer tijd nodig heeft.</p></section>
 
     <section class="columns product">
-        <div class="gallery"><img id="gallery-image" src="assets/kamado-links.webp" alt="Blauwe kamado voor de winkel" width="700" height="500"><div class="gallery-controls" aria-label="Afbeeldingen"><button type="button" data-image="assets/kamado-links.webp" data-alt="Blauwe kamado voor de winkel" aria-pressed="true"><img src="assets/kamado-links.webp" alt="" width="150" height="100"><span>Kamado</span></button><button type="button" data-image="assets/winkel.webp" data-alt="De winkel van Kamado Breda" aria-pressed="false"><img src="assets/winkel.webp" alt="" width="150" height="100"><span>Winkel</span></button></div><p id="gallery-status" class="gallery-status" role="status">1 / 2 · Blauwe kamado voor de winkel</p></div>
+        <div class="gallery">
+            <img id="gallery-image" src="assets/kamado-links.webp" alt="Blauwe kamado voor de winkel" width="700" height="500">
+            <div class="gallery-controls" aria-label="Kies een afbeelding">
+                <button type="button" data-image="assets/kamado-links.webp" data-alt="Blauwe kamado voor de winkel" aria-pressed="true"><img src="assets/kamado-links.webp" alt="" width="150" height="100"><span>Kamado</span></button>
+                <button type="button" data-image="assets/winkel.webp" data-alt="De winkel van Kamado Breda" aria-pressed="false"><img src="assets/winkel.webp" alt="" width="150" height="100"><span>Winkel</span></button>
+                <button type="button" data-image="assets/groenten-grillen.webp" data-alt="Bereidingsidee: paprika, courgette en aubergine op een kamado" aria-pressed="false"><img src="assets/groenten-grillen-klein.webp" alt="" width="240" height="160" loading="lazy"><span>Groenten grillen</span></button>
+                <button type="button" data-image="assets/indirect-garen.webp" data-alt="Bereidingsidee: een braadstuk met uien boven een hitteschild" aria-pressed="false"><img src="assets/indirect-garen-klein.webp" alt="" width="240" height="160" loading="lazy"><span>Indirect garen</span></button>
+            </div>
+            <p id="gallery-status" class="gallery-status" role="status">1 / 4 · Blauwe kamado voor de winkel</p>
+            <p class="gallery-note">De bereidingsbeelden geven een idee van wat je met een kamado kunt maken.</p>
+        </div>
         <div>
             <p class="eyebrow">Keramiek en houtskool</p>
             <h2>Leer je vuur kennen.</h2>
